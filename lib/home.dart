@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
                 ),
                 items: [
                   Container(
-                    color: Colors.green,
+                    color: Colors.greenAccent,
                     width: MediaQuery.of(context).size.width/2,
                   ),
                   Container(
