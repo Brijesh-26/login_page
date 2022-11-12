@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
                     width: MediaQuery.of(context).size.width/2,
                   ),
                   Container(
-                    color: Colors.red,
+                    color: Colors.teal,
                     width: MediaQuery.of(context).size.width/2,
                   ),
                   Container(
