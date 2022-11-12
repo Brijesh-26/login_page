@@ -1,3 +1,5 @@
+
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -16,13 +18,37 @@ class _HomeState extends State<Home> {
         child: Row(
           children: [
 
+            Expanded(
+              child: CarouselSlider(
+                options: CarouselOptions(
 
+                  height: MediaQuery.of(context).size.height,
+                  pauseAutoPlayInFiniteScroll: true,
+                  viewportFraction: 1.0,
+                  autoPlay: true,
+                ),
+                items: [
+                  Container(
+                    color: Colors.black,
+                    width: MediaQuery.of(context).size.width/2,
+                  ),
+                  Container(
+                    color: Colors.red,
+                    width: MediaQuery.of(context).size.width/2,
+                  ),
+                  Container(
+                    color: Colors.green,
+                    width: MediaQuery.of(context).size.width/2,
+                  )
+                ],
+              )
+            ),
 
             Expanded(
 
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(80.0, 60.0, 40.0, 30.0),
+                  padding: EdgeInsets.fromLTRB(100.0, 60.0, 100.0, 30.0),
                   child: Column(
 
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -35,7 +61,7 @@ class _HomeState extends State<Home> {
                           children: [
                             Image.asset('assets/logo.png'),
                             SizedBox(
-                              height: 20.0,
+                              height: 15.0,
                             ),
 
                             Text('Login', style: TextStyle(color: Colors.indigo, fontWeight: FontWeight.w800, fontSize: 30.0),),
@@ -43,7 +69,7 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       SizedBox(
-                        height: 15.0,
+                        height: 10.0,
                       ),
                       Text('Welcome to D-Community', style: TextStyle(color: Colors.black, fontSize: 25.0),),
 
@@ -54,7 +80,7 @@ class _HomeState extends State<Home> {
                       Text('Please login to your account and start searching for jobs...', style: TextStyle(color: Colors.black38),),
 
                       SizedBox(
-                        height: 50.0,
+                        height: 25.0,
                       ),
                       Container(
                           child: Row(
@@ -71,7 +97,7 @@ class _HomeState extends State<Home> {
 
 
                       SizedBox(
-                        height: 20.0,
+                        height: 10.0,
                       ),
                       TextField(
                         decoration: InputDecoration(
@@ -85,14 +111,14 @@ class _HomeState extends State<Home> {
                       ),
 
                       SizedBox(
-                        height: 20.0,
+                        height: 15.0,
                       ),
 
                       Text('Enter OTP', style: TextStyle(fontWeight: FontWeight.w900),),
 
 
                       SizedBox(
-                        height: 20.0,
+                        height: 10.0,
                       ),
 
                       TextFormField(
@@ -129,14 +155,7 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-            Expanded(
-              child: Image(
-                image: AssetImage('assets/Frame_1.jpg'),
-                width: double.infinity,
-                fit: BoxFit.fill,
 
-              ),
-            )
           ],
         ),
       ),
